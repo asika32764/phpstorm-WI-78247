@@ -1,32 +1,20 @@
-# LYRASOFT EVA
+# Reproduce of PhpStorm Issue WI-78247
 
-<div align="center">
-    <img src="https://user-images.githubusercontent.com/1639206/142924046-eb7a1438-4987-4f13-ab73-fde2108a7c1e.jpg">
-</div>
+Clone
 
-## Installation Via Composer
-
-``` bash
-composer create-project lyrasoft/eva your_project
+```shell
+git clone git@github.com:lyrasoft/eva.git
 ```
 
-## Prepare System
+Must run both composer and yarn, that can reproduce issue:
 
-Type this command in your terminal to deploy system and run migration for production environment: 
-
-``` bash
-php windwalker run prepare
+```shell
+composer install
+yarn install
 ```
 
-If you want to set prepare to dev mode, you can use this command in your terminal to run assets sync, migrations and seeders: 
+After composer and yarn installed, and wait phpstorm indexing, then try to refactor `src/Hello/HelloWorld.php`, it not works.
 
-``` bash
-php windwalker run preparedev
-```
+Video:
 
-## Getting Started
-
-Open `http://{Your project root}/www/admin`, you will see the sample page.
-
-Open `http://{Your project root}/www/dev.php`, you will enter the development mode.
-
+[reproduce-video.webm](https://github.com/user-attachments/assets/9a30cd9d-f611-43fe-b3c2-390c6adcc1a6)

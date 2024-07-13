@@ -16,7 +16,7 @@ namespace App\View;
  * @var $lang      LangService     The language translation service.
  */
 
-use App\Hello\HelloWorld;
+use App\Hello\HelloWorld123;
 use Lyrasoft\Luna\Services\ConfigService;
 use Lyrasoft\Luna\User\UserService;
 use Windwalker\Core\Application\AppContext;
@@ -44,16 +44,16 @@ new HelloWorld();
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id={{ $ga }}"></script>
         <script>
-      window.dataLayer = window.dataLayer || [];
+            window.dataLayer = window.dataLayer || [];
 
-      function gtag() {
-          dataLayer.push(arguments);
-      }
+            function gtag() {
+                dataLayer.push(arguments);
+            }
 
-      gtag('js', new Date());
+            gtag('js', new Date());
 
-      gtag('config', '{{ $ga }}');
-    </script>
+            gtag('config', '{{ $ga }}');
+        </script>
     @endpush
 @endif
 
@@ -65,15 +65,15 @@ new HelloWorld();
                 <div class="container">
                     <a class="navbar-brand" href="{{ $uri->path() }}">
                         <img src="{{ $asset->path('images/logo-cw-h.svg') }}"
-                            alt="LOGO"
-                            style="height: 27px;"
+                             alt="LOGO"
+                             style="height: 27px;"
                         />
                     </a>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <x-menu-root :menu="$menu" dropdown class="navbar-nav me-auto mb-2 mb-lg-0"></x-menu-root>
 
                         <ul class="navbar-nav mb-2 mb-lg-0">
-                            <x-locale-dropdown class="nav-item" />
+                            <x-locale-dropdown class="nav-item"/>
 
                             @if (!$user->isLogin())
                                 <li class="nav-item">
@@ -94,15 +94,15 @@ new HelloWorld();
                     </div>
 
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
-                        aria-label="Toggle navigation">
+                            data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                            aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                 </div>
             </nav>
 
             <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar"
-                aria-labelledby="offcanvasNavbarLabel"
+                 aria-labelledby="offcanvasNavbarLabel"
             >
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
@@ -112,7 +112,7 @@ new HelloWorld();
                     <x-menu-root vertical click :menu="$menu" class="navbar-nav me-auto mb-2 mb-lg-0"></x-menu-root>
 
                     <ul class="navbar-nav mb-2 mb-lg-0">
-                        <x-locale-dropdown class="nav-item" />
+                        <x-locale-dropdown class="nav-item"/>
                     </ul>
                 </div>
             </div>
@@ -133,7 +133,7 @@ new HelloWorld();
                 <div class="row">
                     <div class="col-lg-12">
 
-                        <hr />
+                        <hr/>
 
                         <footer>
                             &copy; Windwalker {{ $chronos->localNow('Y') }}
