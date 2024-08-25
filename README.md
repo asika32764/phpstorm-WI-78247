@@ -3,7 +3,7 @@
 Clone
 
 ```shell
-git clone git@github.com:lyrasoft/eva.git
+git clone git@github.com:asika32764/phpstorm-WI-78247.git
 ```
 
 Must run both composer and yarn, that can reproduce issue:
